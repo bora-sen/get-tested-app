@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .inner {
+    @apply p-8;
+  }
+  .title {
+    @apply text-2xl font-bold;
+  }
+  form {
+    @apply grid
+  }
+  form > ul {
+    @apply my-4;
+  }
+  form > ul > li {
+    @apply text-lg flex gap-2 items-center my-2;
+  }
+  form > ul > li > input {
+    @apply w-6 h-6;
+  }
+  .inner > button {
+    @apply bg-primary-blue text-white px-6 py-2 rounded-md disabled:bg-blue-300 block mx-auto sm:mx-4;
+  }
+}
