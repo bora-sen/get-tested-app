@@ -5,7 +5,7 @@ function Footer() {
     <>
     <section className='bg-primary-blue text-center p-4 md:flex md:items-center md:justify-between'>
       <div>
-        <h1 className='text-6xl font-bold font-display text-primary-white'><a href="/">getTested</a></h1>
+        <h1 className='text-4xl font-bold font-display text-primary-white'><a href="/">getTested</a></h1>
       </div>
       <ul className='flex flex-col md:flex-row text-primary-white gap-8 my-12'>
         <li><a href="/" className='button-primary-white'>Create a Test</a></li>

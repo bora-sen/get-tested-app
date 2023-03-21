@@ -4,7 +4,7 @@ function Header() {
   return (
     <section className='bg-primary-blue p-4 flex justify-between'>
       <div>
-        <h1 className='text-5xl font-bold font-display text-primary-white'><a href="/">getTested</a></h1>
+        <h1 className='text-3xl font-bold font-display text-primary-white'><a href="/">getTested</a></h1>
       </div>
       <div className='md:hidden'>
         <button>
