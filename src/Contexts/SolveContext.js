@@ -1,14 +1,14 @@
-import { createContext, useState } from "react";
+import { createContext, useState } from "react"
 
-export const SolveContext = createContext();
+export const SolveContext = createContext()
 
 export default function SolveContextProvider({ children }) {
-  const [Test, setTest] = useState(false);
+  const [Test, setTest] = useState(false)
 
-  const [trueAnswerCount, setTrueAnswerCount] = useState(0);
+  const [trueAnswerCount, setTrueAnswerCount] = useState(0)
 
-  function IncrementTrueCount(){
-    setTrueAnswerCount(prev => (prev += 1))
+  function IncrementTrueCount() {
+    setTrueAnswerCount((prev) => (prev += 1))
   }
 
   const data = {
@@ -16,8 +16,8 @@ export default function SolveContextProvider({ children }) {
     setTest,
     trueAnswerCount,
     setTrueAnswerCount,
-    IncrementTrueCount
-  };
+    IncrementTrueCount,
+  }
 
-  return <SolveContext.Provider value={data}>{children}</SolveContext.Provider>;
+  return <SolveContext.Provider value={data}>{children}</SolveContext.Provider>
 }

@@ -1,18 +1,19 @@
+/* prettier-ignore */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&family=Open+Sans:wght@400;500;600;700&display=swap");
 
-@layer components{
-  body{
-    font-family: 'Open Sans', sans-serif;
-    @apply bg-primary-white
+@layer components {
+  body {
+    font-family: "Open Sans", sans-serif;
+    @apply bg-primary-white;
   }
-  .button-primary-blue{
-    @apply bg-primary-blue text-primary-white font-bold py-2 px-4 rounded-2xl
+  .button-primary-blue {
+    @apply bg-primary-blue text-primary-white font-bold py-2 px-4 rounded-2xl;
   }
-  .button-primary-white{
-    @apply bg-primary-white text-primary-blue-pale font-bold py-2 px-4 rounded-2xl
+  .button-primary-white {
+    @apply bg-primary-white text-primary-blue-pale font-bold py-2 px-4 rounded-2xl;
   }
 }

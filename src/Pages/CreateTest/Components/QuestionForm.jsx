@@ -1,47 +1,47 @@
-import React from "react";
-import { v4 as uuidv4 } from "uuid";
+import React from "react"
+import { v4 as uuidv4 } from "uuid"
 
 function QuestionForm({ addQuestionToTest }) {
-  const questionId = uuidv4();
-  const formHash = Math.floor(Math.random() * 10000);
+  const questionId = uuidv4()
+  const formHash = Math.floor(Math.random() * 10000)
 
   function handleFormSubmit(e) {
-    e.preventDefault();
-    console.log("submit handled");
+    e.preventDefault()
+    console.log("submit handled")
     let questionTitle = document.getElementById(
       `question_title_${formHash}`
-    ).value;
+    ).value
     //console.log(title);
 
     let choice1 = {
       _id: uuidv4(),
       title: document.getElementById(`choice_text_1_${formHash}`).value,
       isTrue: document.getElementById(`choice_radio_1_${formHash}`).checked,
-    };
+    }
     let choice2 = {
       _id: uuidv4(),
       title: document.getElementById(`choice_text_2_${formHash}`).value,
       isTrue: document.getElementById(`choice_radio_2_${formHash}`).checked,
-    };
+    }
     let choice3 = {
       _id: uuidv4(),
       title: document.getElementById(`choice_text_3_${formHash}`).value,
       isTrue: document.getElementById(`choice_radio_3_${formHash}`).checked,
-    };
+    }
     let choice4 = {
       _id: uuidv4(),
       title: document.getElementById(`choice_text_4_${formHash}`).value,
       isTrue: document.getElementById(`choice_radio_4_${formHash}`).checked,
-    };
+    }
 
     let newQuestion = {
       _id: questionId,
       title: questionTitle,
       choices: [choice1, choice2, choice3, choice4],
-    };
+    }
     //console.log(newQuestion);
-    addQuestionToTest(newQuestion);
-    document.getElementById(`choice_button_${formHash}`).disabled = true;
+    addQuestionToTest(newQuestion)
+    document.getElementById(`choice_button_${formHash}`).disabled = true
   }
 
   return (
@@ -83,7 +83,7 @@ function QuestionForm({ addQuestionToTest }) {
       </ul>
       <button id={`choice_button_${formHash}`}>Complete Question</button>
     </form>
-  );
+  )
 }
 
-export default QuestionForm;
+export default QuestionForm
