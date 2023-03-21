@@ -22,15 +22,17 @@ function CreateTest() {
     e.preventDefault();
     let newTest = {
       _id:uuidv4(),
+      title:document.getElementById('test_title_input').value,
       questions
     }
     await addTest(newTest);
-    toast.success("Your test is created!",{duration:"4s"});
+    toast.success(<a href={`http://localhost:3002/solve/${newTest._id}`}>Your test is created! You can acces is using this link {`http://localhost:3002/solve/${newTest._id}`}</a>,{duration:5000});
 
   }
   //useEffect(() => {console.log(questions);},[questions])
   return (
     <Layout>
+      <input id='test_title_input' type="text" />
       <div>
         {
           questionAmount.map((val,index) => {
