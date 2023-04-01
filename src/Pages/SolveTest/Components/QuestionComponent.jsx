@@ -28,6 +28,7 @@ function QuestionComponent({ questionObj }) {
   function handleFormChange(e) {
     setSelChoice(e.target.id)
   }
+  //TODO: Add module css
   return (
     <div className={style.inner}>
       <span className={style.title}>{questionObj.title}</span>
