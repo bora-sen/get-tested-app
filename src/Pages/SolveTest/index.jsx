@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { SolveContext } from "../../Contexts/SolveContext"
 import { getTestWithId } from "../../Firebase/database"
 import Layout from "../../Layout"
@@ -7,6 +7,7 @@ import QuestionComponent from "./Components/QuestionComponent"
 import style from "./index.module.css"
 
 function SolveTest() {
+  const navigate = useNavigate()
   const { testId } = useParams()
   const { Test, setTest, trueAnswerCount } = useContext(SolveContext)
 
@@ -25,8 +26,10 @@ function SolveTest() {
     console.log("Finished The Test! true count -> ", trueAnswerCount)
     if (trueAnswerCount > Test.questions.length / 2) {
       console.log("YOU PASSED !!!!")
+      navigate("/congratulations", { replace: true })
     } else {
       console.log("YOU DIDN'T PASS")
+      navigate("/congratulations", { replace: true })
     }
   }
 

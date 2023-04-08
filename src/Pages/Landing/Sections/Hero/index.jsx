@@ -11,7 +11,7 @@ function Hero() {
           alt=""
         />
       </div>
-      <div className="text-center my-4 md:w-[25rem] lg:w-[35rem]">
+      <div className="flex flex-col my-4 md:w-[25rem] lg:w-[35rem]">
         <h2 className="text-6xl font-semibold">
           Create your <b>online test</b> now!
         </h2>
@@ -19,7 +19,7 @@ function Hero() {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, a
           pariatur? Dolorem nisi sunt voluptatem.
         </h4>
-        <a href="/create/test" className="btn btn-primary">
+        <a href="/create/test" className="block button-primary-blue mx-auto">
           Create a Test
         </a>
       </div>

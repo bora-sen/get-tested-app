@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer components {
+  .box_shadow {
+    box-shadow: 3px 3px 0px #000;
+  }
+  .box_shadow_hover {
+    @apply hover:box_shadow transition-all;
+  }
   .inner {
     @apply p-8;
   }
@@ -22,6 +28,6 @@
     @apply w-6 h-6;
   }
   .inner > button {
-    @apply bg-primary-blue text-white px-6 py-2 rounded-md disabled:bg-blue-300 block mx-auto sm:mx-4;
+    @apply box_shadow_hover bg-primary-blue text-black font-bold px-6 py-2 disabled:bg-primary-blue-pale disabled:text-white block mx-auto sm:mx-4;
   }
 }

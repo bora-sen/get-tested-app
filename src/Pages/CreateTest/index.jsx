@@ -4,6 +4,8 @@ import QuestionForm from "./Components/QuestionForm"
 import { addTest } from "../../Firebase/database"
 import { v4 as uuidv4 } from "uuid"
 import { toast } from "react-hot-toast"
+import style from "./create-test.module.css"
+import SuccessToast from "../../Toasts/SuccessToast"
 
 function CreateTest() {
   const [questionAmount, setQuestionAmount] = useState(["x"])
@@ -27,26 +29,47 @@ function CreateTest() {
     }
     await addTest(newTest)
     toast.success(
-      <a href={`http://localhost:3002/solve/${newTest._id}`}>
-        Your test is created! You can acces is using this link{" "}
-        {`http://localhost:3002/solve/${newTest._id}`}
-      </a>,
-      { duration: 5000 }
+      <SuccessToast url={`http://localhost:3002/solve/${newTest._id}`} />,
+      {
+        duration: 6000,
+        style: {
+          borderRadius: 0,
+          boxShadow: "6px 6px #000",
+          marginBottom: "2rem",
+        },
+      }
     )
   }
   //useEffect(() => {console.log(questions);},[questions])
   return (
     <Layout>
-      <input id="test_title_input" type="text" />
-      <div>
-        {questionAmount.map((val, index) => {
-          return (
-            <QuestionForm key={index} addQuestionToTest={addQuestionToTest} />
-          )
-        })}
-        <button onClick={(e) => handleAddQuestion(e)}>Add Question</button>
-      </div>
-      <button onClick={(e) => handleCompleteTest(e)}>Complete Text</button>
+      <section className={style.create_test}>
+        <input
+          className={style.test_title_input}
+          id="test_title_input"
+          type="text"
+          placeholder="Enter Test Title"
+        />
+        <div>
+          {questionAmount.map((val, index) => {
+            return (
+              <QuestionForm key={index} addQuestionToTest={addQuestionToTest} />
+            )
+          })}
+          <button
+            className={style.btn_add_question}
+            onClick={(e) => handleAddQuestion(e)}
+          >
+            Add Question
+          </button>
+        </div>
+        <button
+          className={style.btn_complete_test}
+          onClick={(e) => handleCompleteTest(e)}
+        >
+          Complete Text
+        </button>
+      </section>
     </Layout>
   )
 }

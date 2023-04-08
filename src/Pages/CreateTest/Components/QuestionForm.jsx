@@ -1,5 +1,6 @@
 import React from "react"
 import { v4 as uuidv4 } from "uuid"
+import style from "../create-test.module.css"
 
 function QuestionForm({ addQuestionToTest }) {
   const questionId = uuidv4()
@@ -45,43 +46,78 @@ function QuestionForm({ addQuestionToTest }) {
   }
   //TODO: Add module css
   return (
-    <form id="questionform" onSubmit={(e) => handleFormSubmit(e)}>
-      <input id={`question_title_${formHash}`} type="text" />
-      <ul>
-        <li>
+    <form
+      id="questionform"
+      onSubmit={(e) => handleFormSubmit(e)}
+      className={style.question}
+    >
+      <input
+        className={style.input_question_title}
+        id={`question_title_${formHash}`}
+        type="text"
+        placeholder="Enter question title"
+      />
+      <ul className={style.choices}>
+        <li className={style.choice}>
           <input
             id={`choice_radio_1_${formHash}`}
             name="question-radio"
             type="radio"
+            className={style.input_checkbox}
           />
-          <input id={`choice_text_1_${formHash}`} type="text" />
+          <input
+            className={style.input_text}
+            id={`choice_text_1_${formHash}`}
+            type="text"
+            placeholder="Enter choice"
+          />
         </li>
-        <li>
+        <li className={style.choice}>
           <input
             id={`choice_radio_2_${formHash}`}
             name="question-radio"
             type="radio"
           />
-          <input id={`choice_text_2_${formHash}`} type="text" />
+          <input
+            className={style.input_text}
+            id={`choice_text_2_${formHash}`}
+            type="text"
+            placeholder="Enter choice"
+          />
         </li>
-        <li>
+        <li className={style.choice}>
           <input
             id={`choice_radio_3_${formHash}`}
             name="question-radio"
             type="radio"
           />
-          <input id={`choice_text_3_${formHash}`} type="text" />
+          <input
+            className={style.input_text}
+            id={`choice_text_3_${formHash}`}
+            type="text"
+            placeholder="Enter choice"
+          />
         </li>
-        <li>
+        <li className={style.choice}>
           <input
             id={`choice_radio_4_${formHash}`}
             name="question-radio"
             type="radio"
           />
-          <input id={`choice_text_4_${formHash}`} type="text" />
+          <input
+            className={style.input_text}
+            id={`choice_text_4_${formHash}`}
+            type="text"
+            placeholder="Enter choice"
+          />
         </li>
       </ul>
-      <button id={`choice_button_${formHash}`}>Complete Question</button>
+      <button
+        className={style.btn_question_submit}
+        id={`choice_button_${formHash}`}
+      >
+        Complete Question
+      </button>
     </form>
   )
 }

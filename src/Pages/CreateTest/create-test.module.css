@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer components {
+  .create_test {
+    @apply p-4;
+  }
+  .box_shadow {
+    box-shadow: 3px 3px 0px #000;
+  }
+  .box_shadow_hover {
+    @apply hover:box_shadow transition-all;
+  }
+  .choice {
+    @apply block border-2 border-black py-4 px-2;
+  }
+  .input_question_title {
+    @apply p-4 border-2 border-black font-bold focus:outline-none bg-primary-white;
+  }
+  .test_title_input {
+    @apply px-1 py-2 w-full mb-4 text-center font-bold text-xl focus:outline-none border-2 border-gray-500 focus:border-black bg-primary-white transition-all;
+  }
+  .choices {
+    @apply my-0;
+  }
+  .choice {
+    @apply w-full flex;
+  }
+  .btn_question_submit {
+    @apply bg-primary-blue box_shadow_hover transition-all py-4 border-2 border-black font-bold disabled:hidden;
+  }
+  .input_text {
+    @apply w-full py-4 px-2 text-sm focus:outline-none bg-primary-white;
+  }
+  .question {
+    @apply mb-12;
+  }
+  .btn_add_question {
+    @apply box_shadow_hover w-full bg-primary-green font-bold py-4 border-black border-2 my-4;
+  }
+  .btn_complete_test {
+    @apply box_shadow_hover w-1/2 block mx-auto bg-primary-green font-bold py-4 border-black border-2;
+  }
+}

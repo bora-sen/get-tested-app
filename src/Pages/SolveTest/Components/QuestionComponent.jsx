@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react"
 import { SolveContext } from "../../../Contexts/SolveContext"
 import style from "./question.module.css"
+import { useNavigate } from "react-router-dom"
 
 function QuestionComponent({ questionObj }) {
   const { IncrementTrueCount } = useContext(SolveContext)
@@ -68,7 +69,12 @@ function QuestionComponent({ questionObj }) {
           </li>
         </ul>
       </form>
-      <button onClick={(e) => handleSubmitQuestion(e)}>Submit Question!</button>
+      <button
+        className={style.btn_submit_question}
+        onClick={(e) => handleSubmitQuestion(e)}
+      >
+        Submit Question!
+      </button>
     </div>
   )
 }

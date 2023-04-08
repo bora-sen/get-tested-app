@@ -3,10 +3,17 @@
 @tailwind utilities;
 
 @layer components {
+  .box_shadow {
+    box-shadow: 3px 3px 0px #000;
+  }
+  .box_shadow_hover {
+    @apply hover:box_shadow transition-all;
+  }
+
   .title {
     @apply font-bold text-4xl text-center mt-8;
   }
   .inner > button {
-    @apply bg-blue-500 text-white block mx-auto py-4 px-24 mb-12;
+    @apply box_shadow_hover disabled:hidden font-bold bg-primary-blue text-primary-black block mx-auto py-4 px-24 mb-12;
   }
 }

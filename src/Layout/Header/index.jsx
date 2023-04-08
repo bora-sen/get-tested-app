@@ -2,7 +2,7 @@ import React from "react"
 
 function Header() {
   return (
-    <section className="bg-primary-blue p-4 flex justify-between">
+    <section className="bg-primary-blue-darker p-4 flex justify-between">
       <div>
         <h1 className="text-3xl font-bold font-display text-primary-white">
           <a href="/">getTested</a>

@@ -6,14 +6,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Bakbak+One&family=Open+Sans:wght@400;500;600;700&display=swap");
 
 @layer components {
+  .box_shadow_black {
+    box-shadow: 3px 3px 0px #000;
+  }
+  .box_shadow_white {
+    box-shadow: 3px 3px 0px #fff;
+  }
+
   body {
     font-family: "Open Sans", sans-serif;
     @apply bg-primary-white;
   }
   .button-primary-blue {
-    @apply bg-primary-blue text-primary-white font-bold py-2 px-4 rounded-2xl;
+    @apply bg-primary-blue hover:box_shadow_black transition-all text-primary-black font-bold py-2 px-4;
   }
   .button-primary-white {
-    @apply bg-primary-white text-primary-blue-pale font-bold py-2 px-4 rounded-2xl;
+    @apply bg-primary-white hover:box_shadow_black transition-all text-primary-black font-bold py-2 px-4;
   }
 }

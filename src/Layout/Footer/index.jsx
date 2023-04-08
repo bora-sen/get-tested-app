@@ -3,7 +3,7 @@ import React from "react"
 function Footer() {
   return (
     <>
-      <section className="bg-primary-blue text-center p-4 md:flex md:items-center md:justify-between">
+      <section className="bg-primary-blue-darker text-center p-4 md:flex md:items-center md:justify-between">
         <div>
           <h1 className="text-4xl font-bold font-display text-primary-white">
             <a href="/">getTested</a>
@@ -20,7 +20,7 @@ function Footer() {
           </li>
         </ul>
       </section>
-      <div className="text-white text-xs text-center bg-primary-blue">
+      <div className="text-white text-xs text-center bg-primary-blue-darker">
         <span>Copyright 2023 | Bora</span>
       </div>
     </>
