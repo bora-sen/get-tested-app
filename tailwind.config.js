@@ -12,6 +12,7 @@ module.exports = {
         "primary-red-pale": "#e9354c",
         "primary-green": "#00ff75",
         "primary-black": "#000",
+        "primary-yellow":"#fee432"
       },
       fontFamily: {
         display: ["Bakbak One", "cursive"],

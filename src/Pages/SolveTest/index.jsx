@@ -26,10 +26,10 @@ function SolveTest() {
     console.log("Finished The Test! true count -> ", trueAnswerCount)
     if (trueAnswerCount > Test.questions.length / 2) {
       console.log("YOU PASSED !!!!")
-      navigate("/congratulations", { replace: true })
+      navigate("/congratulations/true", { replace: true })
     } else {
       console.log("YOU DIDN'T PASS")
-      navigate("/congratulations", { replace: true })
+      navigate("/congratulations/false", { replace: true })
     }
   }
 
