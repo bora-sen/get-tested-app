@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         display: ["Bakbak One", "cursive"],
       },
+      backgroundImage:{
+        "landing-main":"url(https://images2.alphacoders.com/304/3042.png)"
+      }
     },
   },
   plugins: [],
